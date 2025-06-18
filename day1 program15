@@ -1,0 +1,11 @@
+The newspaper agency
+#include <stdio.h>
+int main() {
+    int w, x, y, profit;
+    scanf("%d", &w);
+    scanf("%d", &x);
+    scanf("%d", &y);
+    profit = (x - y) * w - 100;
+    printf("%d\n", profit);
+    return 0;
+}
