@@ -1,0 +1,14 @@
+ASCII conversion
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    // Read integer input
+    scanf("%d", &num);
+
+    // Print corresponding ASCII character
+    printf("%c\n", num);
+
+    return 0;
+}
