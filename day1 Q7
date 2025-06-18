@@ -1,0 +1,13 @@
+Value Performance
+#include <stdio.h>
+
+int main() {
+    int intNumber;
+    float floatNumber;
+    scanf("%d", &intNumber);
+    scanf("%f", &floatNumber);
+    printf("%d\n", intNumber);
+    printf("%.2f\n", floatNumber);
+
+    return 0;
+}
