@@ -1,0 +1,29 @@
+Statement Execution
+
+#include <stdio.h>
+int main() {
+    int i;
+    float f;
+    char c;
+    char str1[100], str2[100];
+    scanf("%d", &i);
+    scanf("%f", &f);
+    scanf(" %c", &c);             
+    scanf("%s", str1);           
+    getchar();                    
+    fgets(str2, sizeof(str2), stdin);  
+    int j = 0;
+    while (str2[j] != '\0') {
+        if (str2[j] == '\n') {
+            str2[j] = '\0';
+            break;
+        }
+        j++;
+    }
+    printf("Integer is %d\n", i);
+    printf("Float is %.2f\n", f);
+    printf("Character is %c\n", c);
+    printf("Strings are %s and %s\n", str1, str2);
+
+    return 0;
+}
