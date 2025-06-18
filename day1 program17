@@ -1,0 +1,13 @@
+Harry potter and the sorcerer's stone
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int num, first, last;
+    scanf("%d", &num);
+    num = abs(num);
+    last = num % 10;
+    first = num / 1000;
+    printf("%d\n", first + last);
+    return 0;
+}
