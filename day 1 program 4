@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    float value;
+    scanf("%f", &value);
+    printf("%.5f\n", value);
+    printf("%.4f\n", value);
+    printf("%.3f\n", value);
+    printf("%.2f\n", value);
+    printf("%.1f\n", value);
+    printf("%d\n", (int)value); 
+
+    return 0;
+}
