@@ -1,0 +1,18 @@
+Arithmetic Calculation
+
+#include <stdio.h>
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    printf("Addition=%d\n", a + b);
+    printf("Subtraction=%d\n", a - b);
+    printf("Multiplication=%d\n", a * b);
+    printf("Division=%d\n", a / b);   // Integer division
+    printf("Modulo=%d\n", a % b);     // Remainder
+
+    return 0;
+}
+
