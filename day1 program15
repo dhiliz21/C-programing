@@ -1,11 +1,12 @@
-The newspaper agency
+Wind chill factor
 #include <stdio.h>
+#include <math.h>
 int main() {
-    int w, x, y, profit;
-    scanf("%d", &w);
-    scanf("%d", &x);
-    scanf("%d", &y);
-    profit = (x - y) * w - 100;
-    printf("%d\n", profit);
+    int t, v;
+    float wcf;
+    scanf("%d", &t);
+    scanf("%d", &v);
+    wcf = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * pow(v, 0.16);
+    printf("%.2f\n", wcf);
     return 0;
 }
