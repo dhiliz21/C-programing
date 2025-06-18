@@ -1,0 +1,10 @@
+Execute the String Statement
+
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char name[100];
+    scanf("%[^\n]", name);
+    printf("Hai %s!\tWelcome to Programming Language...\n", name);
+    return 0;
+}
