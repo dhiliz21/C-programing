@@ -1,0 +1,12 @@
+Decimal Formatting-02
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+    float value;
+    scanf("%f", &value);
+    float truncated = ((int)(value * 100)) / 100.0;
+    printf("%.2f\n", truncated);
+    printf("%.2f\n", value);
+    return 0;
+}
