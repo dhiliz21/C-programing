@@ -1,23 +1,22 @@
-Leap Year or Not
+Greatest of Three Numbers
 
 #include <stdio.h>
 int main() {
-    int year;
-    scanf("%d", &year);
+    float num1, num2, num3;
+    scanf("%f %f %f", &num1, &num2, &num3);
+    float max = num3;
+    int maxPos = 3;
 
-    if (year % 100 == 0) {
-        if (year % 400 == 0) {
-            printf("The Given Year %d is a Leap Year.\n", year);
-        } else {
-            printf("The Given Year %d is Not a Leap Year.\n", year);
-        }
-    } else {
-        if (year % 4 == 0) {
-            printf("The Given Year %d is a Leap Year.\n", year);
-        } else {
-            printf("The Given Year %d is Not a Leap Year.\n", year);
-        }
+    if (num1 >= max && num1 >= num2) {
+        max = num1;
+        maxPos = 1;
     }
+    else if (num2 >= max) {
+        max = num2;
+        maxPos = 2;
+    }
+
+    printf("Number%d is maximum with value of %.1f\n", maxPos, max);
 
     return 0;
 }
