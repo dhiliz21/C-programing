@@ -1,0 +1,19 @@
+Gardening
+  
+#include <stdio.h>
+int main() {
+    int r, c, n;
+    scanf("%d%d%d", &r, &c, &n);
+    int col2_start = r + 1;
+    int col2_end = 2 * r;
+
+    int col_before_last_start = (c - 2) * r + 1;
+    int col_before_last_end = (c - 1) * r;
+
+    if ((n >= col2_start && n <= col2_end) || (n >= col_before_last_start && n <= col_before_last_end))
+        printf("It is a mango tree\n");
+    else
+        printf("It is not a mango tree\n");
+
+    return 0;
+}
