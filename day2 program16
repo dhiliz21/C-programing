@@ -1,0 +1,25 @@
+Friendly pair
+
+#include <stdio.h>
+int sum_of_divisors(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0)
+            sum += i;
+    }
+  return sum;
+}
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+    int sum1 = sum_of_divisors(num1);
+    int sum2 = sum_of_divisors(num2);
+    float ratio1 = (float)sum1 / num1;
+    float ratio2 = (float)sum2 / num2;
+    if (ratio1 == ratio2)
+        printf("Friendly Pair\n");
+    else
+        printf("Not Friendly Pair\n");
+
+    return 0;
+}
