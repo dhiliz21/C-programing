@@ -1,0 +1,23 @@
+Count each character in the string
+
+  #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200];
+    int count[256] = {0};
+
+    scanf("%s", str);
+
+    for (int i = 0; str[i]; i++)
+        count[(unsigned char)str[i]]++;
+
+    for (int i = 0; str[i]; i++) {
+        if (count[(unsigned char)str[i]] > 0) {
+            printf("%c\t%d\n", str[i], count[(unsigned char)str[i]]);
+            count[(unsigned char)str[i]] = 0;
+        }
+    }
+
+    return 0;
+}
