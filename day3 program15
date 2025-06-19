@@ -1,0 +1,33 @@
+Best Leader
+
+  #include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n], reversed[n], result[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        reversed[i] = arr[n - 1 - i];
+    }
+    int max = -1;
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (reversed[i] > max) {
+            max = reversed[i];
+            result[count++] = reversed[i];
+        }
+    }
+    printf("The Best Leaders are ");
+    for (int i = 0; i < count; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
