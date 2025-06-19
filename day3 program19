@@ -1,0 +1,45 @@
+Spiral pattern-02
+
+  #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    scanf("%s", str);
+
+    int n = strlen(str);
+    char matrix[100][100];
+    int top = 0, bottom = n - 1, left = 0, right = n - 1;
+    int index = 0;
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            matrix[i][j] = ' ';
+
+    while (top <= bottom && left <= right) {
+        for (int i = left; i <= right; i++)
+            matrix[top][i] = str[index++ % n];
+        top++;
+
+        for (int i = top; i <= bottom; i++)
+            matrix[i][right] = str[index++ % n];
+        right--;
+
+        for (int i = right; i >= left; i--)
+            matrix[bottom][i] = str[index++ % n];
+        bottom--;
+
+        for (int i = bottom; i >= top; i--)
+            matrix[i][left] = str[index++ % n];
+        left++;
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++)
+            printf("%c", matrix[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
+
