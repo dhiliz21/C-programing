@@ -1,0 +1,19 @@
+Recursion-Count the digits
+
+  #include <stdio.h>
+
+int countDigits(long long num) {
+    if (num == 0)
+        return 0;
+    return 1 + countDigits(num / 10);
+}
+
+int main() {
+    long long number;
+    scanf("%lld", &number);
+
+    int count = (number == 0) ? 1 : countDigits(number);
+    printf("The Count the digits: %d\n", count);
+
+    return 0;
+}
