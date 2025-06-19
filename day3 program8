@@ -1,0 +1,42 @@
+Find K Largest Ele
+  
+#include <stdio.h>
+
+void sort(int arr[], int n) {
+    for(int i = 0; i < n-1; i++) {
+        for(int j = 0; j < n-1-i; j++) {
+            if(arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int n, k;
+    scanf("%d", &n);
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &k);
+    sort(arr, n);
+    printf("The elements are in the order: ");
+    for(int i = 0; i < n; i++) {
+        if (i != n-1) 
+            printf("%d ", arr[i]);
+        else
+            printf("%d", arr[i]);
+    }
+    printf("\n");
+    printf("The Kth value is %d and Largest elements are ", k);
+    for(int i = n-1; i >= n-k; i--) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
