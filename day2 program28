@@ -1,0 +1,19 @@
+P2 - Green Lights
+
+  #include <stdio.h>
+
+int main() {
+    double speed_mph, distance_miles, time_seconds;
+    scanf("%lf", &speed_mph);
+    scanf("%lf", &distance_miles);
+    scanf("%lf", &time_seconds);
+    double speed_mps = speed_mph / 3600.0;
+    double time_to_light = distance_miles / speed_mps;
+
+    if (time_to_light < time_seconds)
+        printf("Yes\n");
+    else
+        printf("No\n");
+
+    return 0;
+}
