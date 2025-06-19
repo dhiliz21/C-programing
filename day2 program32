@@ -1,0 +1,12 @@
+Decimal to Hexadecimal Converter
+
+  #include <stdio.h>
+
+int main() {
+    int decimal;
+    scanf("%d", &decimal);
+
+    printf("Hexadecimal number is : %X\n", decimal);
+
+    return 0;
+}
