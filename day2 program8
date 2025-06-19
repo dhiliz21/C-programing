@@ -1,0 +1,44 @@
+Wall Painting
+
+#include <stdio.h>
+int canFit(int wLen, int wBth, int p1Len, int p1Bth, int p2Len, int p2Bth) {
+    if ((p1Len + p2Len <= wLen && p1Bth <= wBth && p2Bth <= wBth) || 
+        (p1Bth + p2Bth <= wBth && p1Len <= wLen && p2Len <= wLen)) {
+        return 1;
+    }
+    if ((p1Len + p2Len <= wBth && p1Bth <= wLen && p2Bth <= wLen) || 
+        (p1Bth + p2Bth <= wLen && p1Len <= wBth && p2Len <= wBth)) {
+        return 1;
+    }
+    return 0;
+}
+
+int main() {
+    int wallLen, wallBth;
+    int p1Len, p1Bth;
+    int p2Len, p2Bth;
+    scanf("%d %d", &wallLen, &wallBth);
+    scanf("%d %d", &p1Len, &p1Bth);
+    scanf("%d %d", &p2Len, &p2Bth);
+    int fit = 0;
+    int i, j;
+    int p1Rot[2][2] = {{p1Len, p1Bth}, {p1Bth, p1Len}};
+    int p2Rot[2][2] = {{p2Len, p2Bth}, {p2Bth, p2Len}};
+
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            if (canFit(wallLen, wallBth, p1Rot[i][0], p1Rot[i][1], p2Rot[j][0], p2Rot[j][1])) {
+                fit = 1;
+                break;
+            }
+        }
+        if (fit) break;
+    }
+
+    if (fit)
+        printf("Raj can fix both painting\n");
+    else
+        printf("Raj cannot fix both painting\n");
+
+    return 0;
+}
