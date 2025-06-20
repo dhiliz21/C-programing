@@ -2,7 +2,7 @@ Gardening
   
 #include <stdio.h>
 int main() {
-    int r, c, n;
+    int r, c, n; 
     scanf("%d%d%d", &r, &c, &n);
     int col2_start = r + 1;
     int col2_end = 2 * r;
