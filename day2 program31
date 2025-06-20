@@ -1,7 +1,6 @@
 Decimal to Binary Converter 4
 
   #include <stdio.h>
-
 void printBinary(int n) {
     if (n > 1) {
         printBinary(n / 2);
