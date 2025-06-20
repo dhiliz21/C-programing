@@ -10,7 +10,7 @@ int main() {
     for (int i = 0; i < n; i++)
         scanf("%d", &group[i]);
 
-    int busCount = 1, currentLoad = 0;
+    int bus= 1, current= 0;
 
     for (int i = 0; i < n; i++) {
         if (currentLoad + group[i] <= m) {
