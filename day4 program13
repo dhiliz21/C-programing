@@ -1,18 +1,15 @@
 Recursion-Sum of Numbers
 
-  #include <stdio.h>
-
+#include <stdio.h>
 int recursiveSum(int n) {
     if (n == 1)
         return 1;
     return n + recursiveSum(n - 1);
 }
-
 int main() {
     int n;
     scanf("%d", &n);
-
-    if (n < 1 || n > 50)
+if (n < 1 || n > 50)
         printf("Enter a Valid Input!!!!!!!!!!!!!!!!!!\n");
     else {
         int sum = recursiveSum(n);
