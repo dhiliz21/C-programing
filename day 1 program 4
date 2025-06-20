@@ -1,5 +1,5 @@
 Decimal Formatting
-
+ 
 #include <stdio.h>
 
 int main() {
