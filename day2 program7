@@ -4,13 +4,10 @@ BMI Calculation
 
 int main() {
     float weight, height, bmi;
-
     scanf("%f", &weight);
     scanf("%f", &height);
-
     height = height / 100;
     bmi = weight / (height * height);
-
     if (bmi < 18.5)
         printf("You are underweight. Have an apple daily.\n");
     else if (bmi >= 18.5 && bmi < 25)
