@@ -8,7 +8,7 @@ int main() {
     int i, pos = -1;
 
     scanf("%s", word);
-    scanf(" %c", &ch);  // Notice space before %c to consume newline
+    scanf(" %c", &ch); 
 
     for (i = 0; word[i] != '\0'; i++) {
         if (word[i] == ch) {
