@@ -33,8 +33,6 @@ int main()
         }
     }
   
-    sort(greater, count);
-  
     printf("The Target values are ");
     for (i = 0; i < count; i++) {
         printf("%d ", greater[i]);
